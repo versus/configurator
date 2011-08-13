@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  value_default: MyString
+  value_validate: MyString
+
+two:
+  name: MyString
+  value_default: MyString
+  value_validate: MyString
