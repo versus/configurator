@@ -1,0 +1,8 @@
+.section
+  .name= section.name
+  .actions
+    = link_to "Reply", new_section_path(:parent_id => section)
+    |
+    \#{link_to "Destroy", section, :confirm => "Are you sure?", :method => :delete}
+                  
+

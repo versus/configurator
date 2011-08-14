@@ -1,4 +1,9 @@
 Configurator::Application.routes.draw do
+
+  get "dashboard/index"
+
+  resources :sections 
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

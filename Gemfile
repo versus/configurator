@@ -17,6 +17,7 @@ gem 'uglifier'
 gem 'haml'
 gem 'jquery-rails'
 gem 'acts_as_state_machine'
+gem "tabs_on_rails"
 # Use unicorn as the web server
 # gem 'unicorn'
 

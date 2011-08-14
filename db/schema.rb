@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(:version => 20110813142115) do
     t.string   "name"
     t.string   "value_default"
     t.string   "value_validate"
-    t.integer  "len_min",        :default => 1
-    t.integer  "len_max",        :default => 20
+    t.integer  "length_min",     :default => 1
+    t.integer  "length_max",     :default => 20
     t.datetime "created_at"
     t.datetime "updated_at"
   end
