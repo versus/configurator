@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %title Configurator
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    %img{:src => '/assets/logo.png', :width=> '350px'}
+    = tabs_tag do |tab| 
+      = tab.dashboard   'Dashboard', root_path 
+      = tab.sections     'Sections', sections_path 
+      = tab.field_types  'Field Types', field_types_path
+    .content
+      = yield
+

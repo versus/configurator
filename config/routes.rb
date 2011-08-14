@@ -1,9 +1,12 @@
 Configurator::Application.routes.draw do
 
-  get "dashboard/index"
+  root :to => "dashboard#index"
 
   resources :sections 
-
+  resources :fields
+  resources :field_types
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
