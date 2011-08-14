@@ -1,0 +1,11 @@
+%p
+    Before add regular expression, check it on a
+    = link_to 'Ruby regular expression editor', 'http://rubular.com/', :target => '_blank'
+
+.form
+    = simple_form_for @field_type do |f| 
+        = f.input :name, :label => 'Name of type'
+        = f.input :value_validate, :label => 'Regular expression'
+        = f.input :length_min, :label => 'Minimum length'
+        = f.input :length_max, :label => 'Maximum length'
+        = f.button :submit 
