@@ -19,6 +19,9 @@ gem 'haml'
 gem 'jquery-rails'
 gem 'acts_as_state_machine'
 gem "tabs_on_rails"
+
+gem "simple_form"
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

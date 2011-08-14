@@ -1,3 +1,35 @@
-%p
-    The name of current tab is
-    = current_tab
+%h3 Configuration files in the system
+.page
+    =render 'form_new_file'
+.slide_left
+    %p
+        Total
+        = @total_files
+        files
+    .add_new_file
+        =link_to 'Add new file', new_section_path
+    .add_new_file
+        =link_to 'Add field type', field_types_path 
+    %h4
+        Enabled
+    %ul
+        -@files_enable.each do |f|
+            %li
+                =link_to f.name, section_path(f)
+    
+    %h4
+        Draft
+    %ul
+        -@files_draft.each do |f|
+            %li
+                =link_to f.name, section_path(f)
+    
+    %h4
+        Disabled
+    %ul
+        -@files_disable.each do |f|
+            %li
+                =link_to f.name, section_path(f)
+
+
+

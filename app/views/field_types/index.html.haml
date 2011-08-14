@@ -1,1 +1,27 @@
 %h3 Type of fields
+
+
+%table.field_type
+    %tr
+        %th Name of type
+        %th Regular expression
+        %th Minimum length
+        %th Maximum length
+        %th{:colspan=>2} Actions
+    - @fields.each do |field|
+        %tr
+            %td
+                =field.name
+            %td
+                ='/'+field.value_validate+'/'
+            %td
+                =field.length_min
+            %td
+                =field.length_max
+            %td
+                =link_to image_tag('/assets/edit.gif', :border =>0), edit_field_type_path(field)
+            %td
+                =link_to image_tag('/assets/delete.png', :border =>0), field, :method => :delete
+%h3 New type of field
+= render :partial => "form"
+    

@@ -1,6 +1,11 @@
 class Section < ActiveRecord::Base
   has_many :fields, :dependent => :destroy
   has_ancestry
+  
+  scope :files, where(:ancestry => nil)
+  scope :draft, where(:state => 'draft')
+  scope :enable, where(:state => 'enable')
+  scope :disable, where(:state => 'disable')
 
   validates :name,  :allow_nil => false, :presence => true
   
@@ -31,8 +36,8 @@ class Section < ActiveRecord::Base
       puts 'to draft'
     end
   
-    def to_enable
-      puts 'to enable'
+    def to_disable
+      puts 'to disable'
     end
 
 end

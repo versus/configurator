@@ -6,11 +6,17 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
+    -if flash[:notice]
+      %h5{:style => "color:green"}= flash[:notice]
+    -if flash[:error]
+      %h5{:style => "color:red"}= flash[:error]
     %img{:src => '/assets/logo.png', :width=> '350px'}
-    = tabs_tag do |tab| 
-      = tab.dashboard   'Dashboard', root_path 
-      = tab.sections     'Sections', sections_path 
-      = tab.field_types  'Field Types', field_types_path
+    .nav
+      = tabs_tag do |tab| 
+        = tab.dashboard   'Dashboard', root_path 
+        = tab.sections     'Sections', sections_path 
+        = tab.field_types  'Field Types', field_types_path
+    
     .content
       = yield
 
